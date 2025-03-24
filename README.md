@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Authentication App with Next.js and Firebase
 
-## Getting Started
+A modern authentication application built with Next.js, TypeScript, Material-UI, and Firebase Authentication.
 
-First, run the development server:
+## Features
 
+- User registration with email and password
+- User login with email and password
+- Password reset functionality
+- Protected routes
+- Modern UI with Material-UI components
+- TypeScript for type safety
+- Responsive design
+
+## Prerequisites
+
+- Node.js 16.x or later
+- npm or yarn
+- Firebase account and project
+
+## Setup
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd my-auth-app
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Create a Firebase project and enable Email/Password authentication:
+   - Go to the [Firebase Console](https://console.firebase.google.com/)
+   - Create a new project or select an existing one
+   - Go to Authentication > Sign-in method
+   - Enable Email/Password authentication
+
+4. Configure environment variables:
+   - Copy `.env.local.example` to `.env.local`
+   - Replace the placeholder values with your Firebase project configuration
+   - You can find these values in your Firebase project settings
+
+5. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+6. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── components/         # Reusable UI components
+├── firebase/          # Firebase configuration
+├── hooks/             # Custom React hooks
+└── pages/             # Next.js pages
+    ├── login.tsx      # Login page
+    ├── register.tsx   # Registration page
+    ├── forgot-password.tsx  # Forgot password page
+    ├── reset-password.tsx   # Password reset page
+    └── home.tsx       # Protected home page
+```
 
-## Learn More
+## Available Scripts
 
-To learn more about Next.js, take a look at the following resources:
+- `npm run dev` - Start the development server
+- `npm run build` - Build the production application
+- `npm start` - Start the production server
+- `npm run lint` - Run ESLint
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technologies Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Next.js](https://nextjs.org/) - React framework
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Material-UI](https://mui.com/) - UI components
+- [Firebase](https://firebase.google.com/) - Authentication
+- [React](https://reactjs.org/) - UI library
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
